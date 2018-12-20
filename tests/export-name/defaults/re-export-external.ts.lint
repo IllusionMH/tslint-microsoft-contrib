@@ -1,4 +1,2 @@
 // should be skipped - no names to validate
 export * from './other';
-
-// just to trigger build
