@@ -15,5 +15,6 @@ before_install:
 
 scripts:
  - npm -v
+ - echo "Done!"
 
 sudo: false
