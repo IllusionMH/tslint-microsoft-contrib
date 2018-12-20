@@ -10,6 +10,8 @@ node_js:
   - '10'
   - '11'
 
+cache: npm
+
 before_install:
   - if [[ "$TRAVIS_OS_NAME" == "windows" ]]; then node `npm prefix -g`/node_modules/npm/bin/npm-cli.js install -g npm@6.5; else npm install -g npm@6.5; fi
 
