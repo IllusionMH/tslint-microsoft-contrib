@@ -13,6 +13,8 @@ node_js:
 cache:
   directories:
   - ${TRAVIS_HOME}/.npm
+  - ${TRAVIS_HOME}/AppData/Roaming/npm-cache
+  - `npm config get cache`/1
 
 before_install:
   - if [[ "$TRAVIS_OS_NAME" == "windows" ]]; then node `npm prefix -g`/node_modules/npm/bin/npm-cli.js install -g npm@6.5; else npm install -g npm@6.5; fi
