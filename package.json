@@ -64,7 +64,7 @@
     "start": "npm-run-all clean copy:json watch:src",
     "test:mocha": "mocha \"dist/src/tests/**/*.js\" --timeout 5000",
     "test:rules": "tslint -r dist/src --test \"tests/**\"",
-    "test": "npm-run-all clean copy:json tsc:src test:* tslint:check lint:* validate:* copy:package copy:meta generate:*",
+    "test": "npm config get cache && echo $TRAVIS_HOME",
     "tsc:src": "tsc",
     "tslint:check": "tslint-config-prettier-check ./tslint.json",
     "validate:config": "node build-tasks/validate-config.js",
